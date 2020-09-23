@@ -18,7 +18,7 @@ const linkedin = {
 	},
 
 	login: async (userName, password) => {
-		await linkedin.page.goto(BASE_URL, { waintUntil: 'networkidle2' });
+		await linkedin.page.goto(BASE_URL, { waitUntil: 'networkidle2' });
 
 		await linkedin.page.type('input[name="session_key"]', userName);
 		await linkedin.page.type('input[name="session_password"]', password);
